@@ -24,7 +24,7 @@ function baca($filenya) {
 		$kata = "Skipped--";
 		echo $kata;
 		$fp = fopen('result-scanner.txt', 'a');
-		fwrite($fp, $kata."\n");
+		fwrite($fp, $kata);
 		fclose($fp);
 	}else {
 		$php_file = file_get_contents($filenya);
@@ -90,13 +90,13 @@ foreach ($list as $value) {
             $kata = $value ." => Safe\n";
 			echo $kata;
 			$fp = fopen('result-scanner.txt', 'a');
-			fwrite($fp, $kata."\n");
+			fwrite($fp, $kata);
 			fclose($fp);
         } else {
             $kata = $value ." => Found (". $cek .")\n";
 			echo $kata;
 			$fp = fopen('result-scanner.txt', 'a');
-			fwrite($fp, $kata."\n");
+			fwrite($fp, $kata);
 			fclose($fp);
         }
         ob_flush();
