@@ -81,7 +81,7 @@ function ngecek($string) {
 }
 $list = ngelist(".");
 echo '<h1 align="center">Simple Backdoor Scanner</h1>';
-echo '<h3 align="center"><a href="">Tn. Ninja</a></h3>';
+echo '<h3 align="center"><a href="https://github.com/tinwaninja/Simple-Backdoor-Scanner-PHP">Tn. Ninja</a></h3>';
 foreach ($list as $value) {
     if (is_file($value)) {
         $string = baca($value);
