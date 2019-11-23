@@ -47,13 +47,27 @@ function ngecek($string) {
     //tambahkan nama fungsi, class, variable yang sering digunakan pada backdoor
     //add name of the function, class, variable that is often used on the backdoor
     $dicari   = array(
+        'base64_encode',
         'base64_decode',
+        'FATHURFREAKZ',
         'eval',
         'gzinflate',
         'str_rot13',
         'convert_uu',
         'shell_data',
-        'symlink'
+        'getimagesize',
+        'magicboom',
+        'exec',
+        'shell_exec',
+        'fwrite',
+        'str_replace',
+        'mail',
+        'file_get_contents',
+        'url_get_contents',
+        'symlink',
+        'substr',
+        '__file__',
+        '__halt_compiler'
     );
     $keluaran = "";
     foreach ($dicari as $value) {
