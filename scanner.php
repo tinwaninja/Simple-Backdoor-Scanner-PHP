@@ -89,16 +89,16 @@ foreach ($list as $value) {
         if (empty($cek)) {
             $kata = '<p style="color: green;">'. $value .' => Safe</p><hr>';
 			echo $kata;
-			$fp = fopen('result-scanner.html', 'a');
-			fwrite($fp, $kata."\n");
-			fclose($fp);
-        } else {
+        } else if(preg_match("/, /", $cek)) {
             $kata = '<p style="color: red;">'. $value .' => Found ('. $cek .')</p><hr>';
 			echo $kata;
 			$fp = fopen('result-scanner.html', 'a');
 			fwrite($fp, $kata."\n");
 			fclose($fp);
-        }
+        }else{
+			$kata = '<p style="color: red;">'. $value .' => Found ('. $cek .')</p><hr>';
+			echo $kata;
+		}
         ob_flush();
         flush();
         sleep(1);
